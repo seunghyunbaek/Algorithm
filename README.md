@@ -1,2 +1,8 @@
-# Algorithm
-LeetCode와 BOJ를 활용합니다
+# Algorithm Study
+
+### 언어
+* Java
+
+### 사이트
+* LeetCode
+* BOJ
