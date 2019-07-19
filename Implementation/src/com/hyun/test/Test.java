@@ -5,9 +5,24 @@ import com.hyun.sort.Search;
 public class Test {
 
 	public static void main(String[] args) {
-		int[] arr = {1,2,3,4,5,6,7,8,9};
-		int target = 6;
-		System.out.println(target + "¿« ¿Œµ¶Ω∫"+Search.SequentialSearch(arr, target));
+//		int[] arr = {1,2,3,4,5,6,7,8,9,10,11,12,13};
+		int len = 100000000;
+		int[] arr = new int[len];
+		for(int i = 0; i < len; i++) {
+			arr[i] = i+1;
+		}
+		int target = len-1;
+		
+		long startTime = System.currentTimeMillis();
+		System.out.println("º¯¬˜≈Ωªˆ  ¿Œµ¶Ω∫: "+Search.SequentialSearch(arr, target));
+		long endTime = System.currentTimeMillis();
+		System.out.println("º¯¬˜≈Ωªˆ : " + (endTime - startTime));
+		
+		
+		startTime = System.currentTimeMillis();
+		System.out.println("¿Ã¡¯≈Ωªˆ ¿Œµ¶Ω∫: " + Search.BinarySearch(arr, target, 0, arr.length));
+		endTime = System.currentTimeMillis();
+		System.out.println("¿Ã¡¯≈Ωªˆ : " + (endTime - startTime));
 	}
 
 }
