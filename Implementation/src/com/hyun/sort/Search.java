@@ -11,16 +11,16 @@ public class Search {
 		return -1;
 	}
 
-	public static int BinarySearch(int[] sortedArray, int key, int low, int high) {
+	public static int BinarySearch(int[] sortedArray, int target, int low, int high) {
 		int index = Integer.MAX_VALUE;
 		
 		while (low <= high) {
 			int mid = (low + high) / 2;
-			if (sortedArray[mid] < key) {
+			if (sortedArray[mid] < target) {
 				low = mid + 1;
-			} else if (sortedArray[mid] > key) {
+			} else if (sortedArray[mid] > target) {
 				high = mid - 1;
-			} else if (sortedArray[mid] == key) {
+			} else if (sortedArray[mid] == target) {
 				index = mid;
 				break;
 			}
