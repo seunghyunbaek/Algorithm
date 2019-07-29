@@ -1,6 +1,6 @@
 package com.hyun.test;
 
-import com.hyun.sort.Search;
+import com.hyun.sort.BinarySearch;
 
 public class Test {
 
@@ -14,13 +14,13 @@ public class Test {
 		int target = len-1;
 		
 		long startTime = System.currentTimeMillis();
-		System.out.println("¼øÂ÷Å½»ö  ÀÎµ¦½º: "+Search.SequentialSearch(arr, target));
+		System.out.println("¼øÂ÷Å½»ö  ÀÎµ¦½º: "+BinarySearch.sequentialSearch(arr, target));
 		long endTime = System.currentTimeMillis();
 		System.out.println("¼øÂ÷Å½»ö : " + (endTime - startTime));
 		
 		
 		startTime = System.currentTimeMillis();
-		System.out.println("ÀÌÁøÅ½»ö ÀÎµ¦½º: " + Search.BinarySearch(arr, target, 0, arr.length));
+		System.out.println("ÀÌÁøÅ½»ö ÀÎµ¦½º: " + BinarySearch.binarySearch(arr, target, 0, arr.length));
 		endTime = System.currentTimeMillis();
 		System.out.println("ÀÌÁøÅ½»ö : " + (endTime - startTime));
 	}

@@ -1,7 +1,7 @@
 package com.hyun.sort;
 
-public class Search {
-	public static int SequentialSearch(int[] arr, int target) {
+public class BinarySearch {
+	public static int sequentialSearch(int[] arr, int target) {
 		if (arr.length > 0) {
 			for (int i = 0; i < arr.length; i++) {
 				if (arr[i] == target)
@@ -10,8 +10,10 @@ public class Search {
 		}
 		return -1;
 	}
+	
+	
 
-	public static int BinarySearch(int[] sortedArray, int target, int low, int high) {
+	public static int binarySearch(int[] sortedArray, int target, int low, int high) {
 		int index = Integer.MAX_VALUE;
 		
 		while (low <= high) {
