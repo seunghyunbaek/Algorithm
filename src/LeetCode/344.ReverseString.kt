@@ -38,7 +38,7 @@ package LeetCode
         2번과, 3번은 원본에 변화가 생기게 되므로 주의해야한다.
 
         만약 원본이 변하지 않길 바란다면 s를 그대로 넘겨주지 말고
-        s.copyOf(), s.clone()
+        s.copyOf(), s.clone() 을 사용한다.
 */
 
 class ReverseString {
