@@ -33,7 +33,7 @@ class Solution {
     /* Solution 2 [Start] */
     fun firstUniqChar2(s: String): Int {
 
-        val map = HashMap<Char, Int>()
+        val map: MutableMap<Char, Int> = mutableMapOf()
 
         for (c in s) {
             map[c] = map.getOrDefault(c, 0) + 1
