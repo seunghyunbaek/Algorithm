@@ -66,6 +66,7 @@ package LeetCode
 
 class RomanToInteger {
     companion object {
+        /* Solution 1 [Start] */
         fun romanToInteger1(s: String): Int {
             var result = 0
             var prev = ' '
@@ -93,7 +94,9 @@ class RomanToInteger {
             'M' -> if (prev == 'C') 800 else 1000
             else -> 0
         }
+        /* Solution 1 [End] */
 
+        /* Solution 2 [Start] */
         fun romanToInteger2(s: String): Int {
             val numberMap = mapOf('M' to 1000, 'D' to 500, 'C' to 100, 'L' to 50, 'X' to 10, 'V' to 5, 'I' to 1)
             var result = 0
@@ -109,6 +112,7 @@ class RomanToInteger {
             println(result)
             return result
         }
+        /* Solution 2 [End] */
     }
 }
 
