@@ -47,12 +47,12 @@ class CountAndSay {
         var s = StringBuilder("1")
         var now = 1
 
-        var result = recursion(now, s, n)
+        var result = solution1(now, s, n)
 
         return result.toString()
     }
 
-    private fun recursion(now: Int, s: StringBuilder, n: Int): StringBuilder {
+    private fun solution1(now: Int, s: StringBuilder, n: Int): StringBuilder {
 
         // 종료 조건
         if (now == n)
@@ -60,7 +60,7 @@ class CountAndSay {
 
         // 길이가 1일 때
         if (s.length == 1) {
-            return recursion(now + 1, StringBuilder("1$s"), n)
+            return solution1(now + 1, StringBuilder("1$s"), n)
         }
 
         // 최소 11 부터 시작
@@ -87,7 +87,7 @@ class CountAndSay {
             }
         }
 
-        return recursion(now + 1, result, n)
+        return solution1(now + 1, result, n)
     }
 }
 
