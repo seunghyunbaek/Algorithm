@@ -107,6 +107,8 @@ class CountAndSay {
         var i = 0
         var count = 0
 
+        // s[i]를 기점으로 뒤에 몇개가 있는지 갯수를 세도록 코드 작성
+        // 갯수 세고나서 기록하고 i를 이동시킨다.
         while(i < s.length) {
             while(i+count < s.length && s[i] == s[i+count])
                 count++
