@@ -43,7 +43,7 @@ import java.lang.StringBuilder
  */
 
 class CountAndSay {
-    fun countAndSay(n: Int): String {
+    fun countAndSay1(n: Int): String {
         var s = StringBuilder("1")
         var now = 1
 
@@ -89,12 +89,41 @@ class CountAndSay {
 
         return solution1(now + 1, result, n)
     }
+
+
+    fun countAndSay2(n: Int): String {
+        var n = n
+        var ret = "" + 1
+
+        while(--n > 0)
+            ret = solution2(ret)
+
+        return ret
+    }
+
+    fun solution2(s:String):String {
+        val ret = StringBuilder()
+
+        var i = 0
+        var count = 0
+
+        while(i < s.length) {
+            while(i+count < s.length && s[i] == s[i+count])
+                count++
+
+            ret.append(count).append(s[i])
+            i += count
+            count = 0
+        }
+
+        return ret.toString()
+    }
 }
 
 fun main() {
     var solution = CountAndSay()
 
-    println(solution.countAndSay(1))
-    println(solution.countAndSay(3))
-    println(solution.countAndSay(4))
+    println(solution.countAndSay1(1))
+    println(solution.countAndSay1(3))
+    println(solution.countAndSay1(4))
 }
